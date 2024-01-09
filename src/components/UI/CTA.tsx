@@ -7,7 +7,7 @@ import FireIcon from '../../../public/fire.svg'
 
 const CTA = ({ size }: { size?: 'md' | 'sm' | 'lg' }) => {
 	return (
-		<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
+		<a href="#pricing">
 			<Button
 				size={size}
 				rightIcon={<Image src={FireIcon} alt="fire" />}
@@ -15,7 +15,7 @@ const CTA = ({ size }: { size?: 'md' | 'sm' | 'lg' }) => {
 			>
 				get instant access now
 			</Button>
-		</Link>
+		</a>
 	)
 }
 

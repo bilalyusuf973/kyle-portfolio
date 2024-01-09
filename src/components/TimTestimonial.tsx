@@ -27,7 +27,7 @@ const TimTestimonial = () => {
 						</Strong>{' '}
 						and make even the most challenging problems digestible. Not only
 						does he teach you the theory but he tests you every step of the way
-						with
+						with&nbsp;
 						<Strong>practical projects</Strong> and exercises that are fun and
 						challenging. Seeing how Kyle designs his courses blew me away, the
 						amount of&nbsp;

@@ -58,10 +58,11 @@ const Intro = () => {
 							}}
 							className="font-semibold"
 						>
-							Hey there! I&apos;m Kyle Cook, and not too long ago, I walked in
-							your shoes — driven, motivated to bring my coding dreams to life.
-							I tried countless, maybe even thousands of JavaScript tutorials
-							hoping to find my way in the coding world.
+							Hi! I&apos;m Kyle Cook. And not too long ago, I walked in your
+							shoes - constantly grinding to bring my coding dreams to life.
+							After investing countless hours, I started questioning if coding
+							was really for me. I was stuck, constantly Googling basic issues,
+							thinking I was the problem.
 						</Text>
 
 						<Text>

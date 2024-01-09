@@ -16,6 +16,8 @@ import React from 'react'
 import { TextWithCheckMark } from '../TextWithCheckMark'
 import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 import CTA from '../UI/CTA'
+import FiveStars from '../UI/FiveStars'
+import { TestimonialAuthor } from './Testimonial'
 
 const Footer = () => {
 	return (
@@ -81,6 +83,10 @@ const Footer = () => {
 					</div>
 				</Flex>
 
+				<div className="mt-14 sm:max-w-[630px]">
+					<FergusonTestimonial />
+				</div>
+
 				<div className="flex flex-col gap-10 items-center !mt-[50px] md:!mt-[120px]">
 					<Separator className="w-full" size="4" />
 
@@ -88,6 +94,43 @@ const Footer = () => {
 				</div>
 			</Container>
 		</Section>
+	)
+}
+
+const FergusonTestimonial = () => {
+	return (
+		<div>
+			<div className="mb-2">
+				<FiveStars />
+			</div>
+			<Text size="2">
+				&ldquo;Before stumbling upon Kyle&apos;s JavaScript course, I was stuck
+				in a not-so-exciting CDL job, dreaming about working with computers.
+				After learning HTML & CSS on my own, getting into JavaScript was not
+				only hard but a bit discouraging. Finding Kyle&apos;s JavaScript
+				Simplified course changed my world and became the key to me landing my
+				first gig as a web developer, which I just started yesterday!
+				Kyle&apos;s lessons not only helped me get past the starting point of
+				HTML and CSS but also taught me JavaScript the correct way while making
+				it affordable.{' '}
+				<Strong>
+					Because of Kyle, I&apos;m not just chasing my dreams; I&apos;m
+					actually living them right now!
+				</Strong>{' '}
+				And it&apos;s not just me—Kyle has a huge impact on my family too. His
+				course has opened doors and is helping me build a better future for my
+				kid and that means more than words can express. Kyle&apos;s passion for
+				this stuff is contagious, and I feel lucky to have learned from
+				him.&rdquo;
+			</Text>
+
+			<div className="mt-4">
+				<TestimonialAuthor
+					profile="/images/ferguson.png"
+					name="Marcus Ferguson"
+				/>
+			</div>
+		</div>
 	)
 }
 

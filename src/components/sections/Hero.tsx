@@ -102,7 +102,7 @@ const Hero = () => {
 						<TextWithCheckMark checkType="circle">
 							Save time and money with{' '}
 							<Text className="font-bolder">
-								proven workflows and expert guidance
+								proven workflows and&nbsp;expert guidance
 							</Text>
 						</TextWithCheckMark>
 					</Flex>

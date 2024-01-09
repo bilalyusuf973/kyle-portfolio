@@ -48,7 +48,7 @@ const packages = [
 		badge: 'most popular',
 		badgeBG: 'bg-brand-blue',
 		features: [
-			'<Strong>Everything in the Basic Package</Strong>',
+			'<Strong>Everything in the Complete Package</Strong>',
 			'Just under <Strong>40 hours</Strong> of content across <Strong>150 videos</Strong>',
 			'<Strong>Six large bonus projects</Strong>',
 			'Four interviews with successful self-taught developers on <Strong>how to land your first job</Strong>',
@@ -101,7 +101,7 @@ const Pricing = () => {
 	return (
 		<Section
 			className="!py-10 md:!py-[100px] text-brand-text-dark bg-blue-gradient-reverse"
-			id="packages"
+			id="pricing"
 		>
 			<Container>
 				<Heading className="!mb-[46px] md:!mb-20" align="center">

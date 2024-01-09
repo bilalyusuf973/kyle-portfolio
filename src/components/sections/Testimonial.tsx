@@ -197,28 +197,43 @@ const TestimonialItem = ({
 							__html: `&ldquo;${testimonial.message}&rdquo;`,
 						}}
 					/>
-					<Flex align="center" gap="4">
-						{testimonial.profile ? (
-							<Image
-								src={testimonial.profile || '/profile-fallback.png'}
-								alt={testimonial.name}
-								width={52}
-								height={52}
-								className="!rounded-full border-2 border-brand-blue"
-							/>
-						) : (
-							<Image src={DPFallback} alt="profile" />
-						)}
-						<Flex direction="column" gap="2">
-							<Text className="capitalize" size="4">
-								{testimonial.name}
-							</Text>
-							<VerifiedBadge />
-						</Flex>
-					</Flex>
+					<TestimonialAuthor
+						name={testimonial.name}
+						profile={testimonial.profile}
+					/>
 				</Flex>
 			</div>
 		</div>
+	)
+}
+
+export const TestimonialAuthor = ({
+	profile,
+	name,
+}: {
+	profile: string
+	name: string
+}) => {
+	return (
+		<Flex align="center" gap="4">
+			{profile ? (
+				<Image
+					src={profile || '/profile-fallback.png'}
+					alt={name}
+					width={52}
+					height={52}
+					className="!rounded-full border-2 border-brand-blue"
+				/>
+			) : (
+				<Image src={DPFallback} alt="profile" />
+			)}
+			<Flex direction="column" gap="2">
+				<Text className="capitalize" size="4">
+					{name}
+				</Text>
+				<VerifiedBadge />
+			</Flex>
+		</Flex>
 	)
 }
 
@@ -232,7 +247,7 @@ const VerifiedBadge = () => {
 				height={14}
 			/>
 			<Text className="text-gray-11 !text-[8px]">
-				<em>Verified Buyer</em>
+				<em>Verified Review</em>
 			</Text>
 		</Flex>
 	)
