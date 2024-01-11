@@ -23,7 +23,7 @@ export const HappyCustomers = ({
 				`}
 			>
 				{' '}
-				Trusted By <Strong>2400+</Strong> Students
+				Trusted By <Strong>2,400+</Strong> Students
 			</Text>
 		</div>
 	)

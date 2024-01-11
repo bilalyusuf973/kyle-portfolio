@@ -28,8 +28,8 @@ const tabsData = [
 		CTAText: 'Learn More',
 	},
 	{
-		value: 'Advance Course',
-		heading: 'Advance Course',
+		value: 'Advanced Course',
+		heading: 'Advanced Course',
 		description: [
 			`Once you become a proficient JavaScript developer then it is time to start diving into the advanced JavaScript ecosystem.`,
 			`This course will take you from junior to mid-level developer with just under <Strong>14 hours</Strong> of content spread across <Strong>65 videos</Strong> and <Strong>9 modules.</Strong>`,

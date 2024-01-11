@@ -50,13 +50,13 @@ const benefits = [
 	{
 		title: 'Stack Skills For Your Dream Job',
 		description:
-			'Build high-value skills for senior dev roles like mindset, first principles thinking, systems thinking, dev interviews and JavaScript mastery.',
+			'Build high-value skills for senior dev roles like mindset, clean code, testing, dev interviews, and JavaScript mastery.',
 		icon: JobIcon,
 	},
 	{
 		title: 'Build your Unfair Advantage',
 		description:
-			'This course goes beyond the typical JavaScript course. You will learn concepts that most people don’t discover until years into their first job.',
+			"This course goes beyond the typical JavaScript course. You will learn concepts that most people don't discover until years into their first job.",
 		icon: AdvantageIcon,
 	},
 	// {
@@ -105,7 +105,7 @@ const Benefits = () => {
 							}}
 							as="div"
 						>
-							The program is designed to evolve you into a dream candidate with
+							This program is designed to evolve you into a dream candidate with
 							the right skills.
 						</Text>
 					</Box>

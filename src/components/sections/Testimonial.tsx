@@ -33,13 +33,15 @@ const testimonials = [
 	{
 		message: `Although I have a fundamental understanding of JavaScript, I learned a lot from the advanced sections of this course. Honestly, it's the most comprehensive JavaScript course I've ever seen.`,
 		name: 'Claudio Bernasconi',
-		profile: '/customer-5.png',
+		profile: '/claudio.png',
+		reviewer: true,
 	},
 
 	{
 		message: `Kyle's content goes beyond the average in both quality and depth. With his dedication to excellence, there's no better option when it comes to learning web development.`,
 		name: 'Caleb Curry',
 		profile: '/caleb.png',
+		reviewer: true,
 	},
 	{
 		message: `I've not been active in the chat of the course, but after finishing it want to thank you for everything and how you simplified concepts that, at least while self-learning, are so complicated.<br />
@@ -51,7 +53,7 @@ const testimonials = [
 	{
 		message: `JavaScript Simplified is concise, to the point, and full of fun projects which constantly had me putting together what I had learned in challenging ways.`,
 		name: 'Brent Morton',
-		profile: '/brent.png',
+		profile: '/customer-5.png',
 	},
 	{
 		message: `Kyle, this is worth the price of admission. That was the best explanation you are ever going to see on array methods.
@@ -59,10 +61,12 @@ const testimonials = [
 			Even bootcamps and the like wont do as good as job teaching this
 			When you explain something it sticks and it's tangible.`,
 		name: 'Sean Barr',
+		profile: '/dp-fallback.svg',
 	},
 	{
 		message: `loving and learning a bunch from this course! aside from breaking down concepts in easily digestible bits, you offer fun mini exercises in each subsection and reassurance that some things *are* hard, which are things i haven't experienced with other JS courses. i was about to give up on programming until I found your course!! thank you`,
 		name: 'Vera Lam',
+		profile: '/dp-fallback-2.svg',
 	},
 ]
 
@@ -148,19 +152,7 @@ const Testimonial = ({ showTopThree = false }: { showTopThree?: boolean }) => {
 									className="-translate-x-1/2 top-1/2"
 								/>
 							)}
-							<div className="py-[3.75rem]">
-								{carouselFragment}
-								{/* <Flex className="!gap-5" align="center" justify="center">
-									<CarouselPrevItemButton
-										onClick={slideToPrevItem}
-										className="block md:hidden relative"
-									/>
-									<CarouselNextItemButton
-										onClick={slideToNextItem}
-										className="block md:hidden relative"
-									/>
-								</Flex> */}
-							</div>
+							<div className="py-[3.75rem]">{carouselFragment}</div>
 							{!showTopThree && (
 								<CarouselNextItemButton
 									onClick={slideToNextItem}
@@ -200,6 +192,7 @@ const TestimonialItem = ({
 					<TestimonialAuthor
 						name={testimonial.name}
 						profile={testimonial.profile}
+						reviewer={testimonial.reviewer}
 					/>
 				</Flex>
 			</div>
@@ -210,9 +203,11 @@ const TestimonialItem = ({
 export const TestimonialAuthor = ({
 	profile,
 	name,
+	reviewer,
 }: {
 	profile: string
 	name: string
+	reviewer?: boolean
 }) => {
 	return (
 		<Flex align="center" gap="4">
@@ -231,13 +226,13 @@ export const TestimonialAuthor = ({
 				<Text className="capitalize" size="4">
 					{name}
 				</Text>
-				<VerifiedBadge />
+				<VerifiedBadge>{reviewer ? 'Reviewer' : 'Buyer'}</VerifiedBadge>
 			</Flex>
 		</Flex>
 	)
 }
 
-const VerifiedBadge = () => {
+const VerifiedBadge = ({ children }) => {
 	return (
 		<Flex className="gap-[6px]" align="center">
 			<Image
@@ -247,7 +242,7 @@ const VerifiedBadge = () => {
 				height={14}
 			/>
 			<Text className="text-gray-11 !text-[8px]">
-				<em>Verified Review</em>
+				<em>Verified {children}</em>
 			</Text>
 		</Flex>
 	)

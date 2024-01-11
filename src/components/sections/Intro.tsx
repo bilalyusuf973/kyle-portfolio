@@ -77,7 +77,7 @@ const Intro = () => {
 								Then in 2015, something clicked. Unlike typical tutorials
 								drowning in JavaScript theory, I found a method which solved the
 								root problem. For 9 years now, I have refined my method with
-								systems thinking, practical projects and mindset development.
+								concept based, practical projects and mindset development.
 							</p>
 							<br />
 							<p>
