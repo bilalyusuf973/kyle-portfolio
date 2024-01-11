@@ -166,11 +166,15 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 					</Flex>
 				</Box>
 
-				<Link href={JS_SIMPLIFIED_PRICING} target="_blank">
-					<Button fullWidth {...p.CTAProps}>
-						buy now
-					</Button>
-				</Link>
+				<Button
+					as="a"
+					href={JS_SIMPLIFIED_PRICING}
+					target="_blank"
+					fullWidth
+					{...p.CTAProps}
+				>
+					buy now
+				</Button>
 			</Flex>
 
 			{/* BADGE */}

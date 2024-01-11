@@ -1,14 +1,19 @@
 import { cn } from '@/lib/utils'
 import { Box, Flex, Text } from '@radix-ui/themes'
-import React, { ButtonHTMLAttributes } from 'react'
+import React, { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonAndAnchorProps = ButtonHTMLAttributes<HTMLButtonElement> &
+	AnchorHTMLAttributes<HTMLAnchorElement>
+
+interface ButtonProps extends ButtonAndAnchorProps {
 	children: React.ReactNode
 	outline?: boolean
 	rightIcon?: React.ReactNode
 	textClassName?: string
 	fullWidth?: boolean
 	size?: 'sm' | 'md' | 'lg'
+	as?: React.ElementType
+	href?: string
 }
 
 const Button = (props: ButtonProps) => {
@@ -20,14 +25,19 @@ const Button = (props: ButtonProps) => {
 		fullWidth = false,
 		className,
 		size = 'lg',
+		as = 'button',
+		href,
 		...rest
 	} = props
 
+	const Component = as
+
 	return (
-		<button
+		<Component
 			className={cn(
 				`rounded-5`,
-				`${fullWidth && '!w-full'} 
+				'inline-block',
+				`${fullWidth ? '!w-full' : 'w-max'} 
 					${
 						outline
 							? 'border-2 border-brand-orange bg-transparent'
@@ -40,6 +50,7 @@ const Button = (props: ButtonProps) => {
 					'px-7 py-3 md:px-9 md:py-5': size === 'lg',
 				}
 			)}
+			href={href}
 			{...rest}
 		>
 			<Flex gap="3" align="center" justify="center">
@@ -59,7 +70,7 @@ const Button = (props: ButtonProps) => {
 
 				{rightIcon && <Box>{rightIcon}</Box>}
 			</Flex>
-		</button>
+		</Component>
 	)
 }
 

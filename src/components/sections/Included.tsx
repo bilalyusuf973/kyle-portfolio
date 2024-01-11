@@ -174,23 +174,24 @@ const TabItem = ({ t }: { t: (typeof tabsData)[number] }) => {
 				</Flex>
 
 				{t.CTALink && (
-					<Link href={t.CTALink} target="_blank" className="w-max">
-						<Button
-							outline
-							rightIcon={
-								<Image
-									src="/right-arrow-orange.svg"
-									alt="arrow"
-									width={20}
-									height={20}
-								/>
-							}
-							textClassName="text-brand-orange font-regular underline underline-offset-[2px]"
-							className="!py-3 !px-10"
-						>
-							{t.CTAText}
-						</Button>
-					</Link>
+					<Button
+						href={t.CTALink}
+						target="_blank"
+						as={Link}
+						outline
+						rightIcon={
+							<Image
+								src="/right-arrow-orange.svg"
+								alt="arrow"
+								width={20}
+								height={20}
+							/>
+						}
+						textClassName="text-brand-orange font-regular underline underline-offset-[2px]"
+						className="!py-3 !px-10"
+					>
+						{t.CTAText}
+					</Button>
 				)}
 			</Flex>
 		</Box>
